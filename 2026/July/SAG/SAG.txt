@@ -1,0 +1,15 @@
+
+
+SAG => How we connect API with main frame. 
+
+
+Ranjith.,, 
+
+Risk issue
+Assumtions
+Informatiion we need to pull
+Any other inforamtion 
+
+
+What all information need to start the work. 
+

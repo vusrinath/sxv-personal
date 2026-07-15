@@ -1,0 +1,21 @@
+
+Things I'm working on
+
+1. PII masking
+	mytiaa profile UI => Ready to testing
+	Bene UI => 
+
+2. 2/3 Benes showing -> INC
+	WSv1 => Deployment is in progress
+	Bus bene => Having Vulb
+	Testing pending  for both
+
+3. PreDiscovery API changes
+	Vulb got fixed, 
+	Cut new branch
+	deploy changes & test
+
+4. Release 06/15
+	Green deployment done
+	Blue is pending
+	

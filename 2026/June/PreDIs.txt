@@ -1,0 +1,29 @@
+
+Pending task 06/08
+
+Prediscovery API
+
+Release
+	CHG Scheduling
+
+Bene UI 
+	PII masking peding senarios
+	Angulaur upgrade issue
+	Deploying to st2 blue - Requested
+	Testing - 
+	
+Bus Bene
+	INC fix - Done
+	Vulb - Done
+	Circute break changes -maju
+	Merge -Pedning
+	Deploying to st2 - pending
+	Testing -peding
+
+Legecy Bene
+	INC fix - Done
+	Vulb - Done
+	Circute break changes -maju
+	Merge -Pedning
+	Deploying to st2 - pending
+	Testing -peding

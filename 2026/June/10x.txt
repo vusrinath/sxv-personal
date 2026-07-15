@@ -1,0 +1,12 @@
+10 Stocks With High-Growth / Multi-Bagger Potential (2026 and beyond)
+#	Ticker	Company	Sector	Why It's on the List
+1	SOUN	SoundHound AI	AI / Voice Tech	~$2.7B market cap, ~$8/share. If AI voice commerce takes off, massive TAM. Analysts have targets up to $20.
+2	IONQ	IonQ	Quantum Computing	Leading pure-play quantum company. Still pre-profit but quantum could have a "ChatGPT moment." Wall Street avg target implies 125% upside.
+3	NBIS	Nebius Group	AI Infrastructure	Spun out of Yandex, building AI cloud infrastructure. Small cap with hyper-growth revenue trajectory.
+4	RELY	Remitly Global	Fintech / Payments	$4.2B cap, 25% YoY revenue growth, just hit profitability. Attacking a $1.8T global remittance market.
+5	RGTI	Rigetti Computing	Quantum Computing	Another pure-play quantum stock with tiny revenue today but huge optionality if quantum scales.
+6	BBAI	BigBear.ai	AI / Defense	AI analytics for defense & government. Small cap, benefiting from increased defense AI spending.
+7	APLD	Applied Digital	AI Data Centers	Building next-gen GPU cloud/data centers for AI workloads. Revenue growing rapidly.
+8	RXRX	Recursion Pharmaceuticals	AI + Biotech	Using AI to discover drugs. High-risk, high-reward — one breakthrough could be transformational.
+9	SKYT	SkyWater Technology	Semiconductor Fab	US-based chip foundry, benefits from onshoring. Just posted record quantum-related revenue.
+10	OUST	Ouster	LiDAR / Autonomy	LiDAR for autonomous vehicles and robotics. Small cap that could ride the autonomous revolution.

@@ -1,0 +1,100 @@
+cmdb id,cmdb app name,ESB Consumer Name,VS,ART,App Contacts,Analysis ,MW,MF Modules,Volume,Estimate,Follow up
+A85647,RetirementPlanTransactionRSV1,RetirementPlanTransactionRS,AM,S&I,Sangeetha Nachimuthu,"Calls individual-v14, which in turn calls multiple natural modules. This is to fetch  IA contracts participant have, and what funds are in them.
+
+Plan of remediation is remove GET /participant/iacontracts/{pin} call and have consumer (UnifiedDesktopTransactionManager) go to alternative source for this data",dsv: individual-v14,"DSVN210X, DSVN264, DSVN271, DSVN279, DSVN280",Low,Small,Dependency: Consuming app (UD Transaction Manager moved to an alternate service)
+A88858,UNIFIED DESKTOP - TRANSACTION MANAGER,UnifiedDesktopTransactionManager,AM,Associate Desktop,"Asheesh Jakhmola, Satish Dantala","Splunk have entry for this.Calls RetirementPlanTransactionRSV1, which in turn calls DSV => Natural for fetching IA contracts (probably legacy IA contracts.
+Remediation: RPT-RS-V1 with CDI/MDM-backed endpoints",dsv: individual-v14,"DSVN210X, DSVN264, DSVN271, DSVN279, DSVN280",Low,Small,"Dependency: An alternate api/data source (cdi/mdm?) is available for this data
+"
+A85658,PARTICIPANT-FORM-WS-V1,ParticipantFormWS,AM,CSCO,"Dinker Pandey, Murali Ravipati, ","dsv: Retrieves the list of available tax forms for a participant, organized by tax year for all contract/product types.
+
+sync-mfproxy-v2:
+1. Submits a Contact Work Flow (CWF) package to the mainframe. This includes creating tracking records, attaching documents (text or image), and triggering ATI (Automatic Tracking Interface) updates for fulfillment actions like duplicate tax form mailings
+
+2.  A simplified CWF submission that only sends tracking records without documents or ATI. Used for cooperate workflow scenarios (e.g., UDFAOCAS application).
+
+FU: What are the consuming apps?","dsv: tax-forms-selection-v1, sync-mfproxy-v2","DSVN291, ISVN3040/WFON1000, ISVN3050/WFON1010, ISVN3060/WFON1300, WFON3020, WFON3070
+",High,Large,Dependency: An alternate api/data source is available for this data
+A85667,TAX-WITHHOLDING-V1,TaxWithholdingWS,E&D,Olympus (E&O),"Satheesh Nagabhairava, Manjunatha Biradar, Tapaswi Shivdas","This codebase has heavy DSV dependency with 22 unique DSVN mainframe modules called indirectly via dsv-generic, plus 3 named DSV documents called directly. All DSV calls route through the esb-dsv-v1 SOAP endpoint. The primary classes making these calls are DSVControl/LegacyDSVControl (SOAP transport), with DSVTransportImpl, LegacyDSVTransportImpl, and DSVGenericsControlImpl as the service-layer orchestrators. The strategy pattern classes (LegacyElectionRequestStrategy, LegacyParticipantRequestStrategy, etc.) are the business-level consumers.
+
+dsv-specific
+dsv-generic
+sync-mfproxy-v2 - need confirmation on modules called.
+isv: Not used?","dsv:participant-elections-dsv-v6, sync-mf-proxy-v2, dsv-generic","DSVN212, DSVN740, DSVN741, TXWN3775, TXWN0020, TXWN3700, DSVN742,DSVN743,DSVN745,DSVN746,DSVN747,DSVN748,DSVN749,DSVN750,DSVN751,DSVN752,DSVN754,DSVN757,DSVN758,DSVN759,DSVN760,DSVN761,DSVN765,DSVN766",High,Medium,"Named DSV Documents — 3 isolated documents with clear contracts, depends on DSVTransportImpl and 2 JAXB packages.
+Static Data Modules via dsv-generic — 15 DSVN modules tightly coupled to app startup caching, DSVGenericsControlImpl, and IFSTaxControl fetchers.
+Transactional Modules via dsv-generic — 6 DSVN modules chained sequentially (765?761?766?760?763?762) in LegacyRetrieveElectionsStrategy; highest risk area.
+DSV SOAP Transport Layer — single shared esb-dsv-v1 endpoint powering all DSV paths; depends on SOAPServiceSupport and Mule gateway routing.
+JAXB Response Models — 22 generated packages coupled to DSV platform XSD definitions; any schema change requires full regeneration and revalidation."
+A43829,IREST,mobileretirementrsv1,AM,Mobile Apps SHIELD,Annalakshmi Ramasamy,dsv: Fetch IA contracts,dsv: participant-portfolio-v2 ,"DSVN210X, DSVN221, DSVN279",High,XS,Dependency: An alternate api/data source is available for this data
+A82394,"PARTICIPANTPROFILE	",ParticipantProfile,E&D,Olympus (E&O),"Satheesh Nagabhairava, Manunatha Biradar","dsv document tax-forms-selection-v1 called used to fetch participant tax form/year data. dsv-generic: No
+sync-mf:Yes
+isv: No
+
+Follow up: List of all data elements: : Rudra/Pallavi/Suhas",dsv: tax-forms-selection-v1; sync-mf-proxy,"DSVN291, ISVN3040, ISVN3050, ISVN3060, WFON3070
+",Medium,Medium,
+A85670,PARTICIPANT-PORTFOLIO-V1,ParticipantPortfolioV1,AM,Customer Account Information,Mahesh Bontula; Kalyan Pilla,"Document name : plan-transactions-history-v1. Retrieves historical plan transactions using dsv natural. Not seeing any calls from the actual consumers, rather seeing the calls only from esb wellness check, which must be the periodic health checks from kong, so not real impact. Remaining documents not going to the dsv natural path. plan-transactions-history-prior-v1, participant-recent-activity-v5, omniconnect-generic-v2.
+
+Remediation: Application to be decommissioned by end of 2026",,,Medium,Small,Alternate sources for a few attributes of recent activity. Assessment of changes to impacted consumers.
+A0645814-S12,MyTIAA Account Home,ACCOUNTINQUIRY,AM,Customer Account Information,Anudeep Mopati; Kalyan Pilla,"dsv: Fetch TIAA traditional interest rates using dsv natural, actively used in prod. 
+Jared has provided an alternative api, need additional analysis. ",dsv:gic-vintages-v2,"DSVN210N, DSVN211N, DSVN221",Medium,Small,The replacement api to get the same data.
+A0766549-S5,IVR-EXPERIENCE-API,IVR,AM,CSCO,"Dinker Pandey, Murali Ravipati, ","dsv  :  Fetches recent activity to determine the status of legacy (EXPAG) cash withdrawal requests. Used to show whether a cash withdrawal is in-progress, completed, or pending. FU: Is this only for cash wdls?
+
+isv:  Submits beneficiary form change work orders and duplicate quarterly statement requests. This creates a task/work item on the mainframe for downstream processing (mailing forms to participants). Is this flow impacted?","dsv: participant-recent-activity-v3, isv:log-cwf?","DSVN524N, DSVN211N",High,Large,"Dependency: An alternate api/data source is available for this data
+
+ISV-v3 LogWork is used"
+A0120964,TaxWars UD App,DigitalTransactionHub,AM,Forest,Venkata Moganti,"IA & ITD tax withholding and tax simulation features use Natural. Proposal is to decomission this application altogether by end of year. 
+
+Needs business approval from IA, ITD & Welath groups to decommission this UD tax module.",,,Low,Large,"Dependency: Need business approval from IA, ITD & Wealth to eliminate this app
+
+Calls to sync-mf-proxy-v2"
+A0399746,EFRSpringBatchProcesses,EFRSpringBatchProcesses,E&D,Olympus (E&O),Mohit Pradhan/Satyam Saxena/Anuj Gadhecha,"dsv:  individual-v23 is called for fetching contract status code for RA, IRA, ATRA, RHP contracts. This is also calling individual-v10 as per prod activity. Please confirm?
+dsv-generic: No
+sync-mf-proxy: No
+isv- : Verify from the isv payload what isv commands are being called?",dsv:  individual-v23,"DSVN210X, DSVN264, DSVN271, DSVN279, DSVN280",Medium,Small,"Follow up: Update analysis doc to provide details as discussed
+Start working on replacing these calls with suggested calls as per the doc. "
+A0465582,Electronic Fund Transfer Service,ElectronicFundTransferService,E&D,Olympus (E&O),Mohit Pradhan/Satyam Saxena/Anuj Gadhecha,"dsv:  individual-v23 is called for fetching plans of IRA Traditional, IRA Roth, SEP IRA, ATRA/RA, RHP, MYGA
+dsv-generic: No
+sync-mf: No 
+isv- : Verify from the isv payload what isv commands are being called?",dsv:  individual-v23,"DSVN210X, DSVN264, DSVN271, DSVN279, DSVN280",Low,Small,"Follow up: Update analysis doc to provide details as discussed
+Start working on replacing these calls with suggested calls as per the doc. "
+A89143,QUICKEN DIRECT CONNECT,ParticipantDownload,E&D,Olympus (E&O),"Vanishi Gadekal, Rashid Shaikh  ","Fetches DA contracts, their transactions and PII details of such participants. These are actively used in prod. 
+
+Need to switch to alternate api/data source to fetch same data.",,"product-accumulation-download-v4
+product-transaction-download-v4",High,Medium,Dependency: An alternate api/data source is available for this data
+38856,WebConnect,ParticipantDownload,E&D,Olympus (E&O),"Vanishi Gadekal, Rashid Shaikh  ","Fetches DA contracts, their transactions and PII details of such participants. These are actively used in prod. 
+
+Need to switch to alternate api/data source to fetch same data.",,"product-accumulation-download-v4
+product-transaction-download-v4",High,Medium,Dependency: An alternate api/data source is available for this data
+A69260,UNIFIED DESKTOP - PARTICIPANT SUMMARY,UnifiedDesktopParticipant,AM,Associate Desktop,"Asheesh Jakhmola, Satish Dantala","Splunk have entry for this.
+Transitive DSV Dependency via DsvVintagesControl (gic-vintages-v3)
+Transitive Dependency via participant-portfolio-rs-v1
+individual-v22 , DSV document calls mainframe modules . The individual document is used to retrieve participant portfolio and profile details. An alternative data source will be needed.
+gic-vintages-v3 , DSV document calls mainframe modules for GIC vintage information. Assess alternative data sourcing for investment vintage data.
+slo-data-by-racf-v3 ,DSV document calls mainframe modules to look up SLO data by RACF identifier. Assess alternative data sourcing for SLO/RACF lookup.",,,Low,Small,
+A0511716,UD Automator,UDNCCAutomator,AM,Associate Desktop,"Asheesh Jakhmola, Satish Dantala","Splunk have entry for this. 
+ISV v3 service is a mainframe-connected intermediary. The SubmitDoc operation submits workflow documents that are ultimately processed by mainframe systems",,,To be reviewed,Medium-Large (75k~),Check why there is no 2026 traffic for this in prod splunk. 
+A69267,UNIFIED DESKTOP - PAYMENT SUMMARY,UnifiedDesktopPaymentSummary,AM,Associate Desktop,"Asheesh Jakhmola, Satish Dantala","Splunk have entry for this.
+The following functional changes are included in this effort and apply equally to both Participant Summary and Transaction Manager (UDTM):
+
+Replace DSV with Direct CDI Calls — All existing DSV Natural calls within both applications will be replaced with direct CDI calls to ensure alignment with the updated service architecture.
+Replace RPT-RS-V1 CDI/MDM-Backed Endpoints — All RPT-RS-V1 endpoints currently backed by CDI/MDM will be replaced with the updated CDI/MDM-backed endpoints to eliminate the legacy RPT dependency across both applications.
+The ISV v3 service is actively used .This is a direct mainframe dependency via ISV . ",,,To be reviewed,X - Small,Check why there is no 2026 traffic for this in prod splunk. 
+A0260573,PARTICIPANT PROFILE - Unified Desktop,No consumer id in the service now. No entry in the splunk,AM,Associate Desktop,"Asheesh Jakhmola, Satish Dantala","No consumer id in the service now. No entry in the splunk. Need code clean up
+
+Code to call sync-mf-proxy-v2 exists, but no production activity is found in splunk. Appears to be dead code. Need to cleanup and regression test after decomm
+ISVN3040  ISV mainframe Natural module handles Tracking Record (TR) fetch operations for the CWF workflow. It is invoked via sync-mfproxy-v2's PostToProxy operation.
+ISVN3050 ISV mainframe Natural module handles Document fetch operations for the CWF workflow. It is invoked via sync-mfproxy-v2's PostToProxy operation
+ISVN3060 is ISV mainframe Natural module handles ATI (Application Transaction Interface) fetch operations. It is invoked via sync-mfproxy-v2's PostToProxy operation
+WFON3070 is mainframe module is used for ""Dup Tax Rpt INQ"" workflow operations. It is dynamically loaded from properties by AtiManager and invoked via sync-mfproxy-v2
+tax-forms-selection-v1 is  DSV document calls mainframe modules that are being used",,,None,X - Small,
+A87509,PARTICIPANT-PORTFOLIO-V3,ParticipantPortfolioV3,AM,Associate Desktop,"Asheesh Jakhmola, Satish Dantala","No entry in the splunk
+DSVN221  call occurs when fetching the factor file date via the dsv-generic document. 
+individual-v24 is DSV document calls mainframe modules
+The dsv-generic document routes to mainframe program DSVN221 for the factor file date lookup. ",,,To be reviewed,Small,
+A85565,UD-PARTICIPANT-RS-V1,UnifiedDesktopParticipantRS,AM,Associate Desktop,"Asheesh Jakhmola, Satish Dantala","No entry in the splunk
+The log-cwf ISV command is used to submit address update workflow requests to the mainframe Corporate Workflow (CWF) system via JMS/ISV. This is a direct mainframe dependency",,,To be reviewed,Small,
+A0260574,PARTICIPANT ACCOUNTS - Unifed Desktop,No consumer id in the service now. No entry in the splunk,AM,Associate Desktop,"Asheesh Jakhmola, Satish Dantala","No consumer id in the service now. No entry in the splunk
+gic-vintages-v2 ,DSV document calls mainframe modules for GIC vintage information
+view-income-summary-v2, DSV document calls mainframe modules for income summary views",,,To be reviewed,Small,
+,ParticipantTools,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
