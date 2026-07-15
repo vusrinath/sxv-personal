@@ -1,5 +1,7 @@
 # CommandLineRunner — Run Code at Application Startup
 
+CommandLineRunner is a Spring Boot interface that lets you execute code once the application context is fully initialized and all beans are ready.
+
 ---
 
 ## What is CommandLineRunner?

@@ -1,5 +1,7 @@
 # @RequestBody — Deserializing JSON Input
 
+Explains how Spring's @RequestBody annotation reads the HTTP request body and automatically converts JSON into a Java object using HttpMessageConverters.
+
 ## What is @RequestBody?
 
 `@RequestBody` is a Spring annotation that tells Spring to **read the HTTP request body** and **convert (deserialize) it into a Java object** automatically.

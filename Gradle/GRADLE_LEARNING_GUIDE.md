@@ -1,5 +1,7 @@
 # Gradle Learning Guide
 
+A comprehensive guide to Gradle build automation covering project structure, build scripts, plugins, repositories, dependencies, credentials, wrapper, tasks, and troubleshooting based on real-world Spring Boot project setup.
+
 ---
 
 ## 1. What is Gradle?

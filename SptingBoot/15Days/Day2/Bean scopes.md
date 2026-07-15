@@ -1,5 +1,7 @@
 # Bean Scopes: Singleton vs Prototype
 
+Defines how Spring manages bean instances through scopes, focusing on the two core scopes: singleton (one shared instance) and prototype (new instance per request).
+
 ---
 
 ## What is a Bean Scope?

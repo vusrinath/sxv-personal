@@ -1,6 +1,8 @@
 # HTTP Methods
 
-## <u>Definitions</u>
+Covers the standard HTTP methods (GET, POST, PUT, PATCH, DELETE) with their semantics, idempotency properties, and usage in REST APIs.
+
+## Definitions
 
 ### GET
 

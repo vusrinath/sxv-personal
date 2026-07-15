@@ -1,5 +1,7 @@
 # Constructor Injection vs Field Injection
 
+Compares the two main dependency injection approaches in Spring, explaining why constructor injection is preferred for testability, immutability, and explicitness.
+
 ---
 
 ## Constructor Injection (Preferred ✅)

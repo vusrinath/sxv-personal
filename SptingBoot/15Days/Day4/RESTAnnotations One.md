@@ -1,5 +1,7 @@
 # REST Annotations — Interview Answers
 
+Covers Spring MVC REST annotations including @Controller, @RestController, @RequestMapping, and related annotations with interview-style Q&A format.
+
 ---
 
 ## Q: What is @Controller and when do you use it?

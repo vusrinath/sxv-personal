@@ -1,5 +1,7 @@
 # Spring / Spring Boot — Keywords, Technical Terms & Jargons
 
+A comprehensive glossary of Spring and Spring Boot terminology covering IoC, DI, MVC, Security, Data Access, AOP, Testing, Microservices, and common design patterns used in enterprise Java applications.
+
 ## Core Spring Concepts
 
 | Term                                  | Meaning                                                                                                        |

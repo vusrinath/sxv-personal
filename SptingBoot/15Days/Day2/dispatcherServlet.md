@@ -1,5 +1,7 @@
 # DispatcherServlet — The Front Controller of Spring MVC
 
+DispatcherServlet is the single entry point for all HTTP requests in Spring MVC. It routes requests to the appropriate controller and manages the full request lifecycle.
+
 ---
 
 ## What is DispatcherServlet?

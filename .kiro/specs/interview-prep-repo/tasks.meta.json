@@ -1,0 +1,249 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create `Note_Template.md` at the repository root": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138530668
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138555357
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138633536
+      }
+    ],
+    "2.1 Create `Concepts/DSA/` and the first five pattern notes": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138533018
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138641556
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139257418
+      }
+    ],
+    "2.2 Create the remaining five pattern notes": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138533272
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138641616
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139257141
+      }
+    ],
+    "2.3 Create the DSA index `Concepts/DSA/README.md`": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138533445
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139263854
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139356360
+      }
+    ],
+    "3.1 Create `Gap_Plan.md` at the repository root": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138533521
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138641665
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139257224
+      }
+    ],
+    "4.1 Rewrite `README.md` as the hub": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138533596
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139361200
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784140176162
+      }
+    ],
+    "5. Checkpoint - verify hub and DSA links resolve": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138533674
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784140193481
+      }
+    ],
+    "6.1 Normalize existing Notes_Files to the Note_Template": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138533916
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138641450
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139257484
+      }
+    ],
+    "6.2 Update the Roadmap coverage flags": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138533980
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139263795
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139356584
+      }
+    ],
+    "7.1 Create the checker scaffold and shared utilities": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534075
+      },
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784140193410
+      }
+    ],
+    "7.2 Implement README structure checks": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534138
+      }
+    ],
+    "7.3 Implement DSA structure checks": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534358
+      }
+    ],
+    "7.4 Implement pattern-note conformance check": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534430
+      }
+    ],
+    "7.5 Implement normalized-note and content-preservation checks": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534494
+      }
+    ],
+    "7.6 Implement Gap_Plan checks": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534560
+      }
+    ],
+    "7.7 Implement cross-file consistency and reachability checks": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534649
+      }
+    ],
+    "7.8 Wire the top-level runner and run the checker": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534802
+      }
+    ],
+    "8. Final checkpoint - run the full structural checker": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138534912
+      }
+    ],
+    "1. Author the Note_Template": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784138633657
+      }
+    ],
+    "3. Author the Gap_Plan": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139257534
+      }
+    ],
+    "6. Normalize existing notes and sync the Roadmap": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784139356705
+      }
+    ],
+    "4. Build the README navigation hub": [
+      {
+        "executionId": "47ea95c9-79c8-4430-a1af-40e8871cd708",
+        "chatSessionId": "sess_0ef876fe-eff4-4148-85ad-579cf6b781fc",
+        "timestamp": 1784140176250
+      }
+    ]
+  }
+}

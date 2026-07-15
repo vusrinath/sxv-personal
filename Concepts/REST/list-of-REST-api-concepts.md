@@ -1,5 +1,7 @@
 # REST API Concepts
 
+A categorized reference of REST API design principles, HTTP semantics, reliability patterns, versioning, security, pagination, error handling, performance, observability, and advanced patterns.
+
 ## Core Design Principles
 
 - **Idempotency** – Repeated requests produce the same result

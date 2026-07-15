@@ -1,5 +1,7 @@
 # @RequestParam vs @PathVariable
 
+Compares the two main ways to extract data from URLs in Spring MVC: @PathVariable for URI path segments and @RequestParam for query string parameters.
+
 ## @PathVariable
 
 Extracts values from the URI path itself.

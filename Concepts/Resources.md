@@ -1,5 +1,7 @@
 # Learning Resources — REST API & Spring Boot
 
+Curated collection of tutorials, YouTube channels, paid courses, and practice platforms organized by topic for learning REST APIs and Spring Boot development.
+
 ---
 
 ## General Spring Boot & REST API
